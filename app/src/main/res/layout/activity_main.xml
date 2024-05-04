@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<TextView
+    android:id="@+id/security"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="SECURITY"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:textColor="@color/black"
+    android:gravity="center"
+ android:padding="30dp"
+    tools:ignore="HardcodedText,MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pink_card"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/pink"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/security"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/sos"
+       android:elevation="8dp"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOS"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/pink_card"
+        app:layout_constraintStart_toStartOf="@id/pink_card"
+        tools:ignore="HardcodedText,MissingConstraints,TextContrastCheck" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="8dp"
+        android:textSize="16sp"
+        android:elegantTextHeight="true"
+        android:text="In Case Of Emergency Keep Telling Family Members To Contact Me"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/sos"
+        app:layout_constraintStart_toStartOf="@id/sos"
+        app:layout_constraintEnd_toStartOf="@id/img1"
+        tools:ignore="HardcodedText,UnknownId,TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_margin="16dp"
+        android:contentDescription="alert img"
+        android:elevation="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/pink_card"
+        app:layout_constraintEnd_toEndOf="@id/pink_card"
+        app:layout_constraintTop_toTopOf="@id/pink_card"
+        android:src="@drawable/sos"
+        tools:ignore="HardcodedText,MissingConstraints,ImageContrastCheck" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/teal_card"
+        app:layout_constraintTop_toBottomOf="@+id/pink_card"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="16dp">
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/guard"
+        android:elevation="8dp"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GUARD"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/teal_card"
+        app:layout_constraintStart_toStartOf="@id/teal_card"
+        tools:ignore="HardcodedText,MissingConstraints,TextContrastCheck" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="8dp"
+        android:textSize="16sp"
+        android:elegantTextHeight="true"
+        android:text="Open When You are in a Potentially Dangerous Journey"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/guard"
+        app:layout_constraintStart_toStartOf="@id/guard"
+        app:layout_constraintEnd_toStartOf="@id/img2"
+        tools:ignore="HardcodedText,UnknownId,TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_margin="16dp"
+        android:contentDescription="alert img"
+        android:elevation="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/shield"
+        app:layout_constraintBottom_toBottomOf="@id/teal_card"
+        app:layout_constraintEnd_toEndOf="@id/teal_card"
+        app:layout_constraintTop_toTopOf="@id/teal_card"
+        tools:ignore="HardcodedText,MissingConstraints,ImageContrastCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
